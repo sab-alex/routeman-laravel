@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: $bg-lightgreen;
+}
+
+.header-logo {
+  height: 85px;
+}
+
+@media (min-width: $tablet-width) {
+  .header-logo {
+    order: 2;
+    height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header-logo {
+    height: 25px;
+  }
+}

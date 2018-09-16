@@ -1,0 +1,31 @@
+@import 'variables';
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Arial", sans-serif;
+  color: black;
+  font-style: normal;
+  background-color: $bg-smoothwhite;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.r-button{
+  text-align: center;
+  border: 1px solid $bg-lightgreen;
+  padding: 10px;
+  max-width: 250px;
+  transition: all .2s;
+  font: 14px 'Lato Black',Open sans,sans-serif;
+  text-transform: uppercase;
+  border-radius: 0;
+  a{
+    color: white;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,126 @@
+.header{
+  .header-logo{
+    display: block;
+    height: 50px;
+    background-color: $bg-lightgreen;
+  }
+  .menu-bars{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    float: right;
+    position: relative;
+    border: 2px solid #FFFFFF;
+    margin-top: 5px;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    z-index: 100;
+    justify-content: center;
+    text-decoration: none;
+    font-size: larger;
+    color: white;
+    margin-top: 7px;
+    margin-right: 10px;
+    i{
+      padding: 14%;
+    }
+  }
+  .header-nav {
+    width: 320px;
+    margin: 0 auto;
+    display: none;
+
+    .list{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .list-item{
+      cursor: pointer;
+      text-align: center;
+      border: 1px solid $bg-white;
+      padding: 10px;
+      max-width: 100%;
+      transition: all .2s;
+      font: 14px 'Lato Black',Open sans,sans-serif;
+      text-transform: uppercase;
+      border-radius: 0;
+      margin-left: 5px;
+      margin-bottom: 5px;
+      a{
+        color: $bg-white;
+        text-decoration: none;
+        transition: all .2s;
+      }
+    }
+    .list-item:hover{
+      background-color: $bg-lightgrey-op;
+      border-color: $bg-white;
+    }
+
+  }
+  .header-nav.toogled {
+    display: block;
+    .menu-bars {
+      background-color: $bg-lightgrey-op;
+    }
+  }
+  .toogled {
+    .menu-bars {
+      background-color: $bg-lightgrey-op;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    .header-logo{
+      display: none;
+    }
+    .header-nav {
+      width: auto;
+      margin: 0;
+      display: block;
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 640px;
+        margin: 0 auto;
+      }
+      .list {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .list-item{
+        border-color: $bg-lightgreen;
+        margin-bottom: 0px;
+        max-width: 250px;
+        display: inline-block;
+      }
+      .menu {
+        width: 570px;
+        .list-item{
+          min-width: 150px;
+        }
+      }
+      .auth {
+        width: 60px;
+      }
+    }
+  }
+
+
+  @media (min-width: $desktop-width) {
+    .header-nav {
+      display: block;
+      .wrapper {
+        width: 960px;
+      }
+      .menu {
+        width: 780px;
+      }
+      .auth {
+        width: 160px;
+      }
+    }
+  }
+}
