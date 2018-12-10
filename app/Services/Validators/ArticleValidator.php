@@ -1,9 +1,6 @@
 <?php
 namespace App\Services\Validators;
 
-use App\Publication;
-use Auth;
-
 class ArticleValidator extends Validator
 {
     public $mediaObjects = [
@@ -29,7 +26,9 @@ class ArticleValidator extends Validator
         'order_by'=>'date',
         'order_sort'=>'desc',
     ];
-    public function storeRules(){
+
+    public function storeRules()
+    {
         return [
             'title' => 'min:3|max:10000',
             'description' => 'max:10000',
@@ -37,16 +36,19 @@ class ArticleValidator extends Validator
             'photos' => 'array|max:'.config('app.article.MAX_COUNT_PHOTOS')
         ];
     }
-    public function updateRules() {
+    public function updateRules()
+    {
         return [
 
         ];
     }
 
-    public function isValidForGet($input) {
+    public function isValidForGet($input)
+    {
         return $this->validate($input, $this->getRules);
     }
-    public function setGetParams($input){
+    public function setGetParams($input)
+    {
         return $this->setParams($input, $this->getRules, $this->getDefaults);
     }
 }
